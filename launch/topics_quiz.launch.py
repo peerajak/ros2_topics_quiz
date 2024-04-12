@@ -5,6 +5,6 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='topics_quiz',
-            executable='topics_quiz_node',
+            executable='topics_quiz_multuallyExclusiveCallback_multiple_node',
             output='screen'),
     ])
