@@ -28,11 +28,18 @@ endif()
 add_executable(topics_quiz_node 
 src/topics_quiz_node.cpp)
 
+add_executable(topics_quiz_multuallyExclusiveCallback_multiple_node
+src/topics_quiz_multuallyExclusiveCallback_multiple.cpp)
+
 ament_target_dependencies(topics_quiz_node 
+rclcpp sensor_msgs geometry_msgs nav_msgs)
+
+ament_target_dependencies(topics_quiz_multuallyExclusiveCallback_multiple_node
 rclcpp sensor_msgs geometry_msgs nav_msgs)
 
 install(TARGETS
    topics_quiz_node
+   topics_quiz_multuallyExclusiveCallback_multiple_node
    DESTINATION lib/${PROJECT_NAME}
  )
 
